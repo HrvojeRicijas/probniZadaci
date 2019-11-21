@@ -14,3 +14,10 @@
 Route::get("/", function () {
     return view('welcome');
 });
+/*
+Route::get("/posts", function () {
+    return view('/posts/posts');
+});
+*/
+Route::get("/posts", "PostController@index");
+Route::Post("/posts/create", "PostController@index");

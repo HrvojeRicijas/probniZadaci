@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Welcome</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -81,18 +81,15 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <span style="font-size:3em;">Reddit</span>
+                    <span style="font-size:1em;">ish</span>
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://laravel.com/docs">Post something!</a>
+                    <a href="https://laracasts.com">Login</a>
+                    <a href="https://laravel-news.com">Register</a>
+                    <a href="https://blog.laravel.com">View posts</a>
                 </div>
             </div>
         </div>
