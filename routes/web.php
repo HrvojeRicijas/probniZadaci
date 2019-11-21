@@ -19,5 +19,7 @@ Route::get("/posts", function () {
     return view('/posts/posts');
 });
 */
-Route::get("/posts", "PostController@index");
-Route::Post("/posts/create", "PostController@index");
+Route::get("/posts", "PostController@index")->name('posts');
+Route::get("/posts/create", "PostController@create");
+Route::get("/posts/{id}", "PostController@show");
+Route::post("/posts/create", "PostController@store")->name('post.store');

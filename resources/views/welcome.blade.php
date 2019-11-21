@@ -89,7 +89,7 @@
                     <a href="https://laravel.com/docs">Post something!</a>
                     <a href="https://laracasts.com">Login</a>
                     <a href="https://laravel-news.com">Register</a>
-                    <a href="https://blog.laravel.com">View posts</a>
+                    <a href="/posts">View posts</a>
                 </div>
             </div>
         </div>
