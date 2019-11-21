@@ -23,3 +23,7 @@ Route::get("/posts", "PostController@index")->name('posts');
 Route::get("/posts/create", "PostController@create");
 Route::get("/posts/{id}", "PostController@show");
 Route::post("/posts/create", "PostController@store")->name('post.store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

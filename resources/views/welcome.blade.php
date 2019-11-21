@@ -64,21 +64,6 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
             <div class="content">
                 <div class="title m-b-md">
                     <span style="font-size:3em;">Reddit</span>
@@ -86,12 +71,18 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Post something!</a>
-                    <a href="https://laracasts.com">Login</a>
-                    <a href="https://laravel-news.com">Register</a>
                     <a href="/posts">View posts</a>
+                    @auth
+                        <a href="/posts/create">Post something!</a>
+                        <a href="/logout">Log out</a>
+                    @else
+                        <a href="/login">Login</a>
+                        <a href="/register">Register</a>
+                    @endauth
+
                 </div>
             </div>
         </div>
     </body>
 </html>
+

@@ -1,17 +1,26 @@
 <html>
     <head>
         <div>
-            <h2>
+            <h1>
                 These are all the posts.
-            </h2>
+            </h1>
         </div>
     </head>
     <body>
         @foreach($posts as $post)
             <div>
-            <a href="posts/{{$post->id}}">{{$post->title}}</a>
-            <h5>{{$post->body}}</h5>
+            <a style="font-size: 40px" href="posts/{{$post->id}}">{{$post->title}}</a>
+            <h4>{{$post->body}}</h4>
             </div>
+
+            <div>
+                <h6>
+                    author placeholder <br>
+                    {{$post->created_at}}
+                </h6>
+            </div>
+            <br>
+            <br>
         @endforeach
     </body>
 

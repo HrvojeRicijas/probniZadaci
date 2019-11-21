@@ -5,8 +5,15 @@
         </h1>
     </head>
     <body>
-        <h3>
-            {{$post->body}}
-        </h3>
+        <div>
+            <h3>
+                {{$post->body}}
+            </h3>
+        </div>
+        <div>
+            author placeholder
+            {{$post->created_at}}
+
+        </div>
     </body>
 </html>
