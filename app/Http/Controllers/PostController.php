@@ -11,9 +11,33 @@ use Illuminate\Support\Facades\Storage;
 class PostController extends Controller
 {
 
-    public function index()
+    public function index($sort)
     {
-        $posts = Post::latest()->get();
+        switch ($sort){
+            case 1:
+                $posts = Post::orderBy("title", "ASC")->get();
+                break;
+            case 2:
+                $posts = Post::orderBy("title", "DESC")->get();
+                break;
+            case 3:
+                $posts = Post::orderBy("created_at", "ASC")->get();
+                break;
+            case 4:
+                $posts = Post::orderBy("created_at", "DESC")->get();
+                break;
+            /* case 5:
+                $posts = Post::get();
+                dd($posts->sortBy(""));
+                break;
+            case 6:
+                $posts = Post::get();
+            */
+            default:
+                $posts = Post::get();
+
+
+        }
         return view("posts.index", ["posts"=>$posts]);
     }
 

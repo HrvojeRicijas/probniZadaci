@@ -35,9 +35,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
                     </ul>
-
+                    <ul class="navbar-nav mc-auto">
+                        @stack("sorting")
+                    </ul>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -71,7 +72,10 @@
                                     </form>
                                 </div>
                             </li>
+
                         @endguest
+
+
                     </ul>
                 </div>
             </div>

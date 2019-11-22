@@ -71,7 +71,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="/posts">View posts</a>
+                    <a href="/posts/all/1">View posts</a>
                     @auth
                         <a href="/posts/create">Post something!</a>
                         <a class="dropdown-item" href="{{ route('logout') }}"
