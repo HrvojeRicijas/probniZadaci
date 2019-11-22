@@ -9,21 +9,26 @@
 
     <body style="text-align: center">
 
-        <form action="{{ route('post.store') }}" method="POST">
+
+        <form action="{{ route('post.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
-            <div class=field">
+            <div class="field">
                 <label class="label" for="title">Title</label>
                 <div>
-                    <input class="text" type="text" name="title" id="title", placeholder="Title">{{ old("title") }}</text>
+                    <input class="text" type="text" name="title" id="title" placeholder="Title">{{ old("title") }}</text>
                 </div>
             </div>
 
-            <div class=field">
-                <label class="label" for="Excerpt">Body</label>
+            <div class="field">
+                <label class="label" for="body">Body</label>
                 <div>
-                    <textarea class="textarea" type="text" name="body" id="body", placeholder="The body of your post">{{ old("body") }}</textarea>
+                    <textarea class="textarea" type="text" name="body" id="body" placeholder="The body of your post">{{ old("body") }}</textarea>
                 </div>
             </div>
+            <div class="field">
+                <input type="file" name="mediaFile" accept="image/*">
+            </div>
+            <br>
             <div>
                 <input type="submit" value="Submit">
             </div>

@@ -20,7 +20,7 @@
                 <h6>
                     {{$post->user->name}}
                     <br>
-                    {{$post->created_at}}
+                    {{$post->created_at->toRfc850String(1)}}
                 </h6>
             </div>
             <br>

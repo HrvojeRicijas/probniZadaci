@@ -28,6 +28,9 @@ class PostController extends Controller
         ]);
         $post=new Post(request(['title', 'body']));
         $post->user_id=Auth::id();
+
+        $request->mediaFile->store('userUploads');
+        $post->filePath=request("mediaFile");
         $post->save();
         return redirect("posts");
     }
