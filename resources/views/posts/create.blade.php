@@ -1,10 +1,13 @@
+@extends ("layouts.app")
+
+@section ("content")
 <html>
 
     <head>
 
     </head>
 
-    <body>
+    <body style="text-align: center">
 
         <form action="{{ route('post.store') }}" method="POST">
             @csrf
@@ -29,6 +32,7 @@
 
 </html>
 
+@endsection
 <!--
 @if ($errors->has("excerpt"))
     <p class="help is-danger">{{$errors->first("excerpt")}}</p>

@@ -1,3 +1,6 @@
+@extends("layouts.app")
+
+@section("content")
 <html>
     <head>
         <div>
@@ -6,16 +9,17 @@
             </h1>
         </div>
     </head>
-    <body>
+    <body style="text-align:center ">
         @foreach($posts as $post)
-            <div>
+            <div >
             <a style="font-size: 40px" href="posts/{{$post->id}}">{{$post->title}}</a>
             <h4>{{$post->body}}</h4>
             </div>
 
             <div>
                 <h6>
-                    author placeholder <br>
+                    {{$post->user->name}}
+                    <br>
                     {{$post->created_at}}
                 </h6>
             </div>
@@ -25,3 +29,4 @@
     </body>
 
 </html>
+@endsection

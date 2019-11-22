@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Middleware\Authenticate;
 use Illuminate\Http\Request;
 use App\Post;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -24,7 +26,8 @@ class PostController extends Controller
         request()->validate([
             "title"=>"required"
         ]);
-        $post=new Post (request(['title', 'body']));
+        $post=new Post(request(['title', 'body']));
+        $post->user_id=Auth::id();
         $post->save();
         return redirect("posts");
     }
@@ -33,7 +36,7 @@ class PostController extends Controller
     {
         //dd($id);
 
-        $post=POST::findOrFail($id);
+        $post = Post::findOrFail($id);
         return view("posts.post", ["post"=>$post]);
     }
 

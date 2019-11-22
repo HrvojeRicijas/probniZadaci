@@ -1,3 +1,5 @@
+
+
 <html>
     <head>
         <h1>
@@ -11,7 +13,8 @@
             </h3>
         </div>
         <div>
-            author placeholder
+            {{$post->user->name}}
+            <br>
             {{$post->created_at}}
 
         </div>
