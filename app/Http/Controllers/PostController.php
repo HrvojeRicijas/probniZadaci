@@ -6,6 +6,7 @@ use App\Http\Middleware\Authenticate;
 use Illuminate\Http\Request;
 use App\Post;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
@@ -28,9 +29,13 @@ class PostController extends Controller
         ]);
         $post=new Post(request(['title', 'body']));
         $post->user_id=Auth::id();
+        if(request()->filePath) {
+            $request->filePath->store('public/userUploads');
+            $post->filePath = request("filePath")->hashName();
+        }
+//        $post->filePath = Storage::disk('public')
+//            ->put('userUploads/' . $request->filePath->getClientOriginalName(), $request->filePath);
 
-        $request->mediaFile->store('userUploads');
-        $post->filePath=request("mediaFile");
         $post->save();
         return redirect("posts");
     }

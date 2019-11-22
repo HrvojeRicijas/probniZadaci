@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="field">
-                <input type="file" name="mediaFile" accept="image/*">
+                <input accept="image/*" name="filePath" type="file">
             </div>
             <br>
             <div>

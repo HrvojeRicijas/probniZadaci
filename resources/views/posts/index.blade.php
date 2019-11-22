@@ -16,11 +16,13 @@
             <h4>{{$post->body}}</h4>
             </div>
 
+            <img src="/storage/userUploads/{{$post->filePath}}" alt="", height="50" widht="50">
+
             <div>
                 <h6>
                     {{$post->user->name}}
                     <br>
-                    {{$post->created_at->toRfc850String(1)}}
+                    {{$post->created_at->toRfc850String()}}
                 </h6>
             </div>
             <br>
